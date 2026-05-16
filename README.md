@@ -37,7 +37,24 @@ sudo apt install jq python3
 
 ## Installation
 
-### Option A — Clone and install (recommended)
+### Option A — npx (no install required, recommended)
+
+```bash
+npx claude_bar
+```
+
+That's it. npx downloads and runs the installer automatically. No `git clone` needed.
+
+### Option B — Global install
+
+```bash
+npm install -g claude_bar
+claude_bar
+```
+
+Useful if you want the `claude_bar` command always available to re-run or update.
+
+### Option C — Clone and install
 
 ```bash
 git clone https://github.com/xuyiwenak/claude_bar.git
@@ -46,12 +63,6 @@ bash install.sh
 ```
 
 Then restart Claude Code (quit and reopen, or start a new session).
-
-### Option B — One-liner
-
-```bash
-git clone https://github.com/xuyiwenak/claude_bar.git && bash claude_bar/install.sh
-```
 
 ### What the installer does
 
@@ -98,12 +109,14 @@ Scans **all** project JSONL files under `~/.claude/projects/`, filters by **loca
 
 ## Updating
 
-Re-run the installer at any time to get the latest version:
-
 ```bash
-cd claude_bar
-git pull
-bash install.sh
+npx claude_bar          # always fetches the latest version from npm
+```
+
+Or if installed globally:
+```bash
+npm update -g claude_bar
+claude_bar
 ```
 
 ---
@@ -111,8 +124,12 @@ bash install.sh
 ## Uninstalling
 
 ```bash
-cd claude_bar
-bash uninstall.sh
+npx claude_bar uninstall
+```
+
+Or if installed globally:
+```bash
+claude_bar uninstall
 ```
 
 This removes `~/.claude/statusline-command.sh` and strips the `statusLine` key from `~/.claude/settings.json`.
