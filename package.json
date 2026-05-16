@@ -1,8 +1,14 @@
 {
   "name": "claude-bar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom status line for Claude Code — context window, last interaction tokens, today total tokens",
-  "keywords": ["claude", "claude-code", "statusline", "token", "ai"],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "statusline",
+    "token",
+    "ai"
+  ],
   "author": "xuyiwenak",
   "license": "MIT",
   "repository": {
