@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# claude_bar installer
+# claude-bar installer
 # Copies statusline-command.sh to ~/.claude/ and patches ~/.claude/settings.json
 
 set -e
@@ -9,7 +9,7 @@ CLAUDE_DIR="$HOME/.claude"
 TARGET="$CLAUDE_DIR/statusline-command.sh"
 SETTINGS="$CLAUDE_DIR/settings.json"
 
-echo "==> Installing claude_bar..."
+echo "==> Installing claude-bar..."
 
 # ── 1. Dependency check ────────────────────────────────────────────────────
 for cmd in jq python3; do
@@ -33,7 +33,7 @@ if [ ! -f "$SETTINGS" ]; then
 fi
 
 # Back up before patching
-cp "$SETTINGS" "${SETTINGS}.claude_bar_backup"
+cp "$SETTINGS" "${SETTINGS}.claude-bar_backup"
 
 # Inject statusLine config (preserves all existing keys)
 python3 - "$SETTINGS" "$TARGET" << 'PYEOF'

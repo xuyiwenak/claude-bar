@@ -1,5 +1,5 @@
 {
-  "name": "claude_bar",
+  "name": "claude-bar",
   "version": "1.0.0",
   "description": "Custom status line for Claude Code — context window, last interaction tokens, today total tokens",
   "keywords": ["claude", "claude-code", "statusline", "token", "ai"],
@@ -7,11 +7,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xuyiwenak/claude_bar.git"
+    "url": "https://github.com/xuyiwenak/claude-bar.git"
   },
-  "homepage": "https://github.com/xuyiwenak/claude_bar#readme",
+  "homepage": "https://github.com/xuyiwenak/claude-bar#readme",
   "bin": {
-    "claude_bar": "./bin/cli.js"
+    "claude-bar": "./bin/cli.js"
   },
   "files": [
     "bin/",

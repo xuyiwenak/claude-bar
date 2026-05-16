@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# claude_bar uninstaller
+# claude-bar uninstaller
 
 set -e
 
@@ -7,7 +7,7 @@ CLAUDE_DIR="$HOME/.claude"
 TARGET="$CLAUDE_DIR/statusline-command.sh"
 SETTINGS="$CLAUDE_DIR/settings.json"
 
-echo "==> Uninstalling claude_bar..."
+echo "==> Uninstalling claude-bar..."
 
 # Remove script
 if [ -f "$TARGET" ]; then

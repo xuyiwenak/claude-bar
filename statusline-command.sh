@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# claude_bar — Claude Code custom status line
+# claude-bar — Claude Code custom status line
 # Shows: model · cwd · context window bar · last interaction tokens · today total tokens
 #
 # Data sources:

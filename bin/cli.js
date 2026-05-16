@@ -34,7 +34,7 @@ const isUninstall = args.includes('--uninstall') || args.includes('uninstall');
 
 // ── Uninstall ───────────────────────────────────────────────────────────────
 if (isUninstall) {
-  console.log('==> Uninstalling claude_bar...');
+  console.log('==> Uninstalling claude-bar...');
 
   if (fs.existsSync(TARGET)) {
     fs.unlinkSync(TARGET);
@@ -53,7 +53,7 @@ if (isUninstall) {
 }
 
 // ── Install ─────────────────────────────────────────────────────────────────
-console.log('==> Installing claude_bar...\n');
+console.log('==> Installing claude-bar...\n');
 
 checkDep('jq');
 checkDep('python3');
@@ -69,7 +69,7 @@ if (!fs.existsSync(SETTINGS)) {
   fs.writeFileSync(SETTINGS, '{}\n');
 }
 
-const backup = SETTINGS + '.claude_bar_backup';
+const backup = SETTINGS + '.claude-bar_backup';
 fs.copyFileSync(SETTINGS, backup);
 
 let settings = {};
@@ -92,4 +92,4 @@ console.log(`    (backup saved at ${backup})\n`);
 console.log('✓ Done! Restart Claude Code to see your new status bar.\n');
 console.log('  Preview:');
 console.log('  Sonnet 4.6  ~/myproject context[████░░░░░░ 40%] ↩12.3k ∑456k\n');
-console.log('  To uninstall:  npx claude_bar uninstall');
+console.log('  To uninstall:  npx claude-bar uninstall');
